@@ -44,17 +44,17 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center text-white text-5xl font-bold mt-24">Tasks</h1>
+      <h1 className="text-center text-white text-3xl font-bold mt-16">Tasks</h1>
       <div className="flex justify-center items-center">
         <input
-          className="w-6xl bg-white my-16 px-6 py-6 rounded-l-xl text-3xl outline-none"
+          className="w-xl bg-white my-8 px-4 py-2 rounded-l-xl text-xl outline-none"
           type="text"
           placeholder="Task"
           value={Inp}
           onChange={(e) => setInp(e.target.value)}
         />
         <button
-          className="bg-blue-500 text-white py-6 px-4 text-3xl rounded-r-xl cursor-pointer"
+          className="bg-blue-500 text-white py-2 px-2 text-xl rounded-r-xl cursor-pointer"
           onClick={addTask}
         >
           Add Task

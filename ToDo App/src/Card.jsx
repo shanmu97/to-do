@@ -21,13 +21,13 @@ function Card({ todo, editTask, id, deleteTask }) {
   };
 
   return (
-    <div className={`flex justify-between w-5xl text-black mx-auto p-4 rounded-lg text-3xl mb-10 ${isChecked?"bg-green-500 line-through":'bg-amber-50'}`}>
+    <div className={`flex justify-between w-lg text-black mx-auto px-4 rounded-lg text-lg mb-4 ${isChecked?"bg-green-500 line-through":'bg-amber-50'}`}>
       <div className="flex justify-center items-center">
         <input
           type="checkbox"
           checked={isChecked}
           onChange={(e) => setIsChecked(e.target.checked)}
-          className="mx-4 w-6 h-6"
+          className="mx-2 w-4 h-4"
         />
         {editing ? (
           <input
@@ -41,14 +41,14 @@ function Card({ todo, editTask, id, deleteTask }) {
       </div>
       <div>
         <button
-          className="p-2 text-black rounded-lg hover:bg-blue-600 cursor-pointer mx-6"
+          className="p-2 text-black rounded-lg hover:bg-blue-600 cursor-pointer mx-2"
           onClick={handleEdit}
           ref={pencilRef}
         >
-          <PencilIcon className="w-6 h-6" />
+          <PencilIcon className="w-4 h-4" />
         </button>
-        <button className="p-2 text-black rounded-lg hover:bg-red-600 cursor-pointer" onClick={()=>deleteTask(id)}>
-          <TrashIcon className="w-6 h-6" />
+        <button className=" text-black rounded-lg hover:bg-red-600 cursor-pointer" onClick={()=>deleteTask(id)}>
+          <TrashIcon className="w-4 h-4" />
         </button>
       </div>
     </div>
